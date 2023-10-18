@@ -2,6 +2,8 @@
   "name": "cypress-test-tiny",
   "version": "1.0.0",
   "description": "Small project for quickly testing Cypress.io test runner",
+  "private": true,
+  "type": "module",
   "scripts": {
     "cypress:run": "cypress run",
     "cypress:open": "cypress open",
@@ -9,15 +11,27 @@
     "cypress:version": "cypress version",
     "cypress:info": "cypress info",
     "cypress:cache:list": "cypress cache list",
-    "list-videos": "ls -l cypress/videos"
+    "list-videos": "ls -l cypress/videos",
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
   },
   "keywords": [],
   "author": "Cypress-io",
   "license": "ISC",
   "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "nuxt": "^3.7.4",
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.5"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/cypress-io/cypress-test-tiny.git"
+  },
+  "dependencies": {
+    "cypress": "^13.3.1"
   }
 }
